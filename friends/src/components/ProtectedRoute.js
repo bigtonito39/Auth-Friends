@@ -1,7 +1,7 @@
 import React from "react";
 import {Route, Redirect} from "react-router-dom";
 
-export default function ProtectedRoute( {component:component, ...rest}) {
+export default function ProtectedRoute( {component:Component, ...rest}) {
 
     let isItIn = localStorage.getItem("token");
 
@@ -10,7 +10,7 @@ if theyre loogged in send them to proper route
 if theyre NOT logged in it will redirect them to the login component*/
 
 return(
-    <Route {...state} 
+    <Route {...rest} 
     render={() => {
         if (isItIn) {
             return <Component />

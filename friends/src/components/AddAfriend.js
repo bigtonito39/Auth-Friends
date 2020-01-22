@@ -12,7 +12,7 @@ class AddAfriend extends React.Component {
         }
 
         handleChanges =event =>{
-            this.state({
+            this.setState({
                 newFriends: {
                ...this.state.newFriends,[event.target.name]:event.target.value
                 }
@@ -28,8 +28,9 @@ class AddAfriend extends React.Component {
         }
 
         render() {
+            console.log(this.state.newFriends)
             return (
-                <div>
+                <div className="AddDiv">
                     <h1>Add your new friend</h1>
                     <form onSubmit ={this.addnewFriend}>
                         <input 
@@ -37,7 +38,7 @@ class AddAfriend extends React.Component {
                         name="name"
                         value={this.state.newFriends.name}
                         onChange={this.handleChanges}
-                        placeholder="Full name goes here please"
+                        placeholder="Full name"
                         
                         />
                           <input 
@@ -45,7 +46,7 @@ class AddAfriend extends React.Component {
                         name="age"
                         value={this.state.newFriends.age}
                         onChange={this.handleChanges}
-                        placeholder="Age goes here please"
+                        placeholder="Age"
                         
                         />
                          <input 
@@ -53,7 +54,7 @@ class AddAfriend extends React.Component {
                         name="email"
                         value={this.state.newFriends.email}
                         onChange={this.handleChanges}
-                        placeholder="Email goes here please"
+                        placeholder="Email"
                         
                         />
 

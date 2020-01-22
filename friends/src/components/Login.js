@@ -24,13 +24,15 @@ class Login extends React.Component {
         })
         .then(response => {
             localStorage.setItem("token", response.data.payload)
+            console.log(response.data.payload)
         })
         .catch(error => console.log("Error", error))
     }
 
     render() {
+        console.log(this.state)
         return (
-            <div>
+            <div className="friendsDiv">
             <h1>Sign in Here</h1>
             <form onSubmit={this.loginIn}>
                 <input 
