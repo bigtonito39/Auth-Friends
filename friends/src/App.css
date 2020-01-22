@@ -16,3 +16,14 @@ justify-content: space-around;
 .friendsDiv{
   margin-left:35%;
 }
+
+.friendList{
+  margin-left: 15%;
+}
+
+.friendsdetailsDiv{
+  border: dotted red 2px;
+  width:50%;
+  margin:2%;
+
+}

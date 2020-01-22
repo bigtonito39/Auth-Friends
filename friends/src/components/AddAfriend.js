@@ -17,6 +17,7 @@ class AddAfriend extends React.Component {
                ...this.state.newFriends,[event.target.name]:event.target.value
                 }
             })
+            
         }
 
         addnewFriend = event => {
@@ -25,6 +26,7 @@ class AddAfriend extends React.Component {
             })
             .then(response => {console.log("response from adding a friend", response)})
             .catch(err => {console.log("error from adding a friend", err)})
+            event.preventDefault()
         }
 
         render() {

@@ -14,6 +14,7 @@ class ListOfFriends extends React.Component {
         GetTheToken()
         .get("/friends")
         .then(response => {
+            console.log(response.data)
             this.setState({...this.state, FriendList:response.data})
         })
         .catch(err => {console.log("error", err)})
@@ -21,11 +22,11 @@ class ListOfFriends extends React.Component {
     
     render(){
         return (
-            <div>
+            <div className="friendList">
                 <h1>All The Friends are here!</h1>
 
                 {this.state.FriendList.map( friend =>
-                <div>
+                <div className="friendsdetailsDiv" key={friend.id}>
     <p>name:{friend.name}</p>
     <p>name:{friend.age}</p>
     <p>name:{friend.email}</p>

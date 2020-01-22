@@ -9,8 +9,11 @@ export default function ProtectedRoute( {component:Component, ...rest}) {
 if theyre loogged in send them to proper route
 if theyre NOT logged in it will redirect them to the login component*/
 
+console.log()
+
 return(
     <Route {...rest} 
+
     render={() => {
         if (isItIn) {
             return <Component />

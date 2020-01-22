@@ -24,9 +24,10 @@ class Login extends React.Component {
         })
         .then(response => {
             localStorage.setItem("token", response.data.payload)
-            console.log(response.data.payload)
+            
         })
         .catch(error => console.log("Error", error))
+        event.preventDefault()
     }
 
     render() {
