@@ -65,3 +65,5 @@ class AddAfriend extends React.Component {
             )
         }
 }
+
+export default AddAfriend;
