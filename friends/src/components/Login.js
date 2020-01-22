@@ -2,6 +2,7 @@ import React from "react";
 import axios from "axios";
 
 class Login extends React.Component {
+    
     state = {
         credentials: {
             username:"",
@@ -24,6 +25,7 @@ class Login extends React.Component {
         })
         .then(response => {
             localStorage.setItem("token", response.data.payload)
+            this.props.history.push("/protected")
             
         })
         .catch(error => console.log("Error", error))
@@ -31,7 +33,7 @@ class Login extends React.Component {
     }
 
     render() {
-        console.log(this.state)
+       
         return (
             <div className="friendsDiv">
             <h1>Sign in Here</h1>

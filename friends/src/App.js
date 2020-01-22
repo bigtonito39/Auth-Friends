@@ -13,7 +13,6 @@ function App() {
     
    <Router>
 <div className="App">
-
 <div className="NavDiv">
 <h1>Welcome to your friends Token protected API POST/ GET Project</h1>
 <Link to="/login" className="nav">Login</Link>
