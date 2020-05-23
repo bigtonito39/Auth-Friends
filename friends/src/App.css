@@ -1,0 +1,29 @@
+.NavDiv{
+margin-left:20%;
+justify-content: space-around;
+
+}
+
+.nav{
+  text-decoration: none;
+  margin:10%;
+  
+}
+.AddDiv{
+  margin-left:35%;
+}
+
+.friendsDiv{
+  margin-left:35%;
+}
+
+.friendList{
+  margin-left: 15%;
+}
+
+.friendsdetailsDiv{
+  border: dotted red 2px;
+  width:50%;
+  margin:2%;
+
+}
